@@ -1,0 +1,31 @@
+       !MS$ NOFREEFORM
+       !MS$ FIXEDFORMLINESIZE:132
+c
+c **** Common usage variables
+c
+        common /par001/ zero, one, two, three
+        common /par002/ i_sec(3),i_min(3),i_hrs(3),i_day(3)
+c
+c **** Scalar parameters
+c
+        common /scal01/ r, em, wage_rate
+		common /scal02/ rho, gamma, theta, beta
+		common /scal03/ grid_step
+		common /scal04/ delta_c, delta_el
+		common /scal05/ jage
+		common /scal06/ omg
+c
+c **** Arrays and vectors
+c
+	    common /arr001/ dm_mat(0:120),df_mat(0:120),s(0:120)
+	    common /arr003/ p(0:120)
+c
+        common /grd001/ v_d(20:120,1000)
+		common /grd002/ a(20:120,0:1000), c_d(20:120,1000), el_d(20:120,1000)
+		common /grd003/ lamda_d(20:120,1000), mu_d(20:120,1000), vt_d(20:120,1000), omega(20:120,1000)
+		common /grd004/ viable_gridpoint(20:120,0:1000)
+c
+c **** Working arrays (to hold temporary values)
+c
+        common /wrk001/ assets_t
+
